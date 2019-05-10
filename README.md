@@ -1,5 +1,41 @@
 ## GOAL
 1. understand regexp deeply
+    - character set
+        - range
+        - shorthands
+            - \w \d \s \W \D \S
+    - control chars
+    - escape
+    - wildcard
+    - repitition
+        - + ? * {min,max}
+        - greediness / laziness
+            - +? ?? *? {min,max}?
+    - boundary
+        - \b \B
+    - grouping
+    - capturing
+        - \1 \2
+        - (?:)
+    - anchor
+        - ^$
+        - \A \Z
+    - (positive|negative)look(ahead|behind)
+        - understand as anchor
+        - (?=)
+        - (?!)
+        - (?<=)
+        - (?<!)
+    - unicode 
+        - \uxxxx
+        - hiragana, katakana, kanji
 2. understand how regexp works
     - transform regexp pattern to automaton rules
-3. review how to use regexp in JavaScript
+    - ex: transform /\d\d\d-?\d{4-?\d{3, 4}/ to rules
+        - type Rule struct {from: State, to: State, char: rune }
+        - type accept_statuses []State
+3. review how to use regexp in some languages
+    - JavaScript
+    - Ruby
+    - golang
+    - C++
